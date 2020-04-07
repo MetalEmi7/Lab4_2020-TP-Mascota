@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Lab4TpMascota"
+    }
+  },
+  "defaultProject": "Lab4TpMascota",
+  "cli": {
+    "analytics": false
+  }
 }
