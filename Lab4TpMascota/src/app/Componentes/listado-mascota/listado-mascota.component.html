@@ -1,1 +1,38 @@
-<p>listado-mascota works!</p>
+<div class="alert alert-primary">
+    <app-carga-mascota (Out_Mascota)="AddPet($event)"></app-carga-mascota>
+</div>
+
+<div class="alert alert-warning">
+    <div *ngFor="let item of List_Mascota">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-1">                
+                    <img style="width: 50px; height: 50px;" [src]="item.Foto" alt="Imagen de {{item.Nombre}}">
+                </div>  
+
+                <div class="col-7">                
+                    <input disabled class="form-control" type="text" [value]="item.Nombre" placeholder="Ingrese nombre de la mascotas">
+                </div>      
+
+        
+                <div class="col-2">                
+                    <select disabled class="form-control" name="SlcTipo" id="SlcTipo" [value]="item.Tipo">
+                        <option selected value="Felino">Felino</option>
+                        <option value="Canino">Canino</option>
+                        <option value="Pez">Pez</option>
+                    </select>
+                </div>
+        
+                <div class="col-2">    
+                    <input class="form-control btn btn-primary" type="button" value="Ver detalles" (click)="ShowPet(item)">
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<div class="alert alert-success">
+    <app-mascota [Mascota]=Mascota_ParaMostrar></app-mascota>
+</div>

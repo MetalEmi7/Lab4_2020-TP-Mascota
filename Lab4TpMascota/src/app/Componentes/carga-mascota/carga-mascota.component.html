@@ -1,39 +1,27 @@
-    <div class="container">   
-
-        <div class="row">
-            <div class="col">                
-                <label>Nombre de Mascota</label>
-                <input class="form-control" type="text" [(ngModel)]="Nombre" placeholder="Ingrese nombre de la mascotas">
-            </div>
-
-            <div class="col">                
-                <label>Foto</label>
-                <input class="form-control" type="text" [(ngModel)]="Foto">
-            </div>
-
-            <div class="col-2">                
-                <label>Tipo</label>
-                <select class="form-control" name="SlcTipo" id="SlcTipo" [(ngModel)]="Tipo">
-                    <option selected value="Felino">Felino</option>
-                    <option value="Canino">Canino</option>
-                    <option value="Pez">Pez</option>
-                </select>
-            </div>
-
-            <div class="col-2">    
-                <label><br></label>            
-                <input class="form-control btn btn-success" type="button" value="Agregar" (click)="AddPet()">
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col">                
+            <label>Nombre de Mascota</label>
+            <input class="form-control" type="text" [(ngModel)]="Nombre" placeholder="Ingrese nombre de la mascotas">
         </div>
 
-
-        <div class="row">
-            <div class="col">
-                
-
-
-            </div>
+        <div class="col">                
+            <label>Foto</label>
+            <input class="form-control" type="text" [(ngModel)]="Foto">
         </div>
 
+        <div class="col-2">                
+            <label>Tipo</label>
+            <select class="form-control" name="SlcTipo" id="SlcTipo" [(ngModel)]="Tipo">
+                <option selected value="Felino">Felino</option>
+                <option value="Canino">Canino</option>
+                <option value="Pez">Pez</option>
+            </select>
+        </div>
 
+        <div class="col-2">    
+            <label><br></label>            
+            <input class="form-control btn btn-success" type="button" value="Agregar" (click)="AddPet()">
+        </div>
     </div>
+</div>

@@ -7,11 +7,9 @@ import { Mascota } from '../../Entidades/mascota';
   styleUrls: ['./carga-mascota.component.css']
 })
 export class CargaMascotaComponent implements OnInit {
-  //  MiMascota: Mascota;
   Nombre: string;
   Foto: string;
   Tipo: string;
-  ListaMascota: Array<Mascota> = [];
   
   @Output() Out_Mascota = new EventEmitter<any>();
 
@@ -26,7 +24,7 @@ export class CargaMascotaComponent implements OnInit {
 
   public AddPet() {
     console.log(this.Nombre);
-    this.ListaMascota.push(new Mascota(this.Nombre, this.Foto, this.Tipo));
+    this.Out_Mascota.emit(new Mascota(this.Nombre, this.Foto, this.Tipo));
   }
 
 

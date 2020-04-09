@@ -1,7 +1,6 @@
-<app-carga-mascota></app-carga-mascota>
+<input type="button" value="click" (click)="mialert(Mascota.Nombre);">
 
-
-<h5>ESTO ES MASCOTA</h5>
-
-
-<app-listado-mascota></app-listado-mascota>
+<div *ngIf="Mascota">
+    {{Mascota.Nombre}} - tipo: {{Mascota.Tipo}} <br>
+    <img style="width: 350px; height: 350px;" [src]="Mascota.Foto" alt="Imagen de {{Mascota.Nombre}}">
+</div>
