@@ -13,11 +13,4 @@ export class MascotaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  /**
-   * mialert
-   */
-  public mialert(asd) {
-    alert(asd);
-  }
 }

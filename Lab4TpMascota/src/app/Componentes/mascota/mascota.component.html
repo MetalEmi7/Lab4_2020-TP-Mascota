@@ -1,6 +1,11 @@
-<input type="button" value="click" (click)="mialert(Mascota.Nombre);">
-
-<div *ngIf="Mascota">
-    {{Mascota.Nombre}} - tipo: {{Mascota.Tipo}} <br>
-    <img style="width: 350px; height: 350px;" [src]="Mascota.Foto" alt="Imagen de {{Mascota.Nombre}}">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div *ngIf="Mascota">
+                {{Mascota.Nombre}} - tipo: {{Mascota.Tipo}} <br>
+                <img style="width: 350px; height: 350px;" [src]="Mascota.Foto" alt="Imagen de {{Mascota.Nombre}}">
+            </div>     
+        </div>     
+    </div>
 </div>
+
