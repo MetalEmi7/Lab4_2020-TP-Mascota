@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { Mascota } from '../../Entidades/mascota';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-carga-mascota',
@@ -17,9 +18,12 @@ export class CargaMascotaComponent implements OnInit {
   ngOnInit(): void { }
 
   public AddPet() {
-    console.log(this.Nombre);
-    this.Out_Mascota.emit(new Mascota(this.Nombre, this.Foto, this.Tipo));
-    this.ClearInputs();    
+    if (this.Nombre != "" || this.Foto != "") {
+      this.Out_Mascota.emit(new Mascota(this.Nombre, this.Foto, this.Tipo));
+      this.ClearInputs();   
+    }
+    else    
+      alert("No se han completado todos los datos");  
   }
 
   public ClearInputs() {

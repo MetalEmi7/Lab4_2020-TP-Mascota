@@ -2,7 +2,9 @@
     <div class="row">
         <div class="col">
             <div *ngIf="Mascota">
-                {{Mascota.Nombre}} - tipo: {{Mascota.Tipo}} <br>
+                Nombre de la mascota: {{Mascota.Nombre}} <br>
+                Tipo: {{Mascota.Tipo}} <br>
+                Foto: <br>  
                 <img style="width: 350px; height: 350px;" [src]="Mascota.Foto" alt="Imagen de {{Mascota.Nombre}}">
             </div>     
         </div>     
