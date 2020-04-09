@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { Mascota } from '../../Entidades/mascota';
-import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-carga-mascota',
