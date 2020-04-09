@@ -4,15 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CargaMascotaComponent } from './Componentes/carga-mascota/carga-mascota.component';
+import { ListadoMascotaComponent } from './Componentes/listado-mascota/listado-mascota.component';
+import { MascotaComponent } from './Componentes/mascota/mascota.component';
+
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CargaMascotaComponent
+    CargaMascotaComponent,
+    ListadoMascotaComponent,
+    MascotaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
